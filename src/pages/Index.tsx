@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 import { FragranceCard } from "@/components/FragranceCard";
 import { FRAGRANCES } from "@/data/fragrances";
 import { About } from "./About";
+import { CTABanner } from "./CTABanner";
 import { Footer } from "./Footer";
 import hero from "@/assets/hero.jpg";
 import hero2 from "@/assets/hero-2.jpg";
@@ -118,8 +119,12 @@ export function Index() {
         </div>
       </section>
 
+      <About />
       {/* Curated Collection Preview */}
-      <section className="border-t border-[#ECE5D8] bg-[#FAF7F2] px-6 py-16 lg:px-16 lg:py-24">
+      <section
+        id="collections"
+        className="border-t border-[#ECE5D8] bg-[#FAF7F2] px-6 py-16 lg:px-16 lg:py-24"
+      >
         <div className="mx-auto max-w-7xl">
           <div className="text-center sm:text-left">
             <p className="text-xs font-medium uppercase tracking-[0.25em] text-gold">
@@ -147,7 +152,7 @@ export function Index() {
         </div>
       </section>
 
-      <About />
+      <CTABanner />
       <Footer />
     </div>
   );

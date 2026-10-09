@@ -19,38 +19,6 @@ export function Footer({ showCta = true }: FooterProps) {
 
   return (
     <footer className="w-full">
-      {/* Pre-footer Call to Action Banner */}
-      {showCta && (
-        <section className="relative overflow-hidden bg-[#f7efe9] px-6 py-20 text-center sm:py-24 lg:py-28">
-          <div className="mx-auto max-w-3xl">
-            <p className="text-xs font-medium uppercase tracking-[0.25em] text-gold">
-              Your story continues
-            </p>
-            <h2 className="mt-5 font-display text-4xl font-normal leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-              Find Your Signature
-              <span className="mt-2 block font-serif italic text-gold">Leave Your Scent</span>
-            </h2>
-            <p className="mx-auto mt-6 max-w-xl text-sm font-light leading-relaxed text-foreground/80 sm:text-base">
-              Meet Belle, Luxe and Noir, and discover the expression that feels most like you.
-            </p>
-            <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
-              <Link
-                to="/collections"
-                className="bg-primary px-8 py-3.5 text-xs font-medium uppercase tracking-[0.2em] text-primary-foreground transition-opacity hover:opacity-85"
-              >
-                Explore Collection
-              </Link>
-              <Link
-                to="/collections"
-                className="border border-foreground/30 bg-background/40 px-8 py-3.5 text-xs font-medium uppercase tracking-[0.2em] text-foreground transition-colors hover:border-foreground hover:bg-background/80"
-              >
-                Shop Gift Sets
-              </Link>
-            </div>
-          </div>
-        </section>
-      )}
-
       {/* Main Footer Links & Newsletter */}
       <div className="bg-background">
         <div className="mx-auto max-w-7xl px-6 py-16 sm:px-10 lg:px-16 lg:py-20">
@@ -68,6 +36,53 @@ export function Footer({ showCta = true }: FooterProps) {
               <p className="mt-6 max-w-sm text-sm font-light leading-relaxed text-muted-foreground">
                 Luxury perfumes crafted to inspire confidence and elegance.
               </p>
+              <div className="mt-5 flex items-center gap-5">
+                <a
+                  href="#"
+                  aria-label="Instagram"
+                  className="text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  <svg
+                    className="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  aria-label="Facebook"
+                  className="text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  <svg
+                    className="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  aria-label="X"
+                  className="text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                </a>
+              </div>
             </div>
 
             {/* Newsletter Column */}

@@ -1,30 +1,30 @@
 import { useState, useEffect } from "react";
-import { X, Star, ShoppingBag, Sparkles, Check } from "lucide-react";
+import { X, Star, MessageCircle, Sparkles } from "lucide-react";
 import { type Fragrance, type BottleSize } from "@/data/fragrances";
+import { buildWhatsAppOrderUrl } from "@/lib/whatsapp";
 
 interface FragranceModalProps {
   fragrance: Fragrance | null;
   onClose: () => void;
-  onAddToBag: (fragrance: Fragrance, size: BottleSize) => void;
 }
 
-export function FragranceModal({ fragrance, onClose, onAddToBag }: FragranceModalProps) {
+export function FragranceModal({ fragrance, onClose }: FragranceModalProps) {
   const [selectedSize, setSelectedSize] = useState<BottleSize>("100ml");
-  const [added, setAdded] = useState<boolean>(false);
 
   useEffect(() => {
     setSelectedSize("100ml");
-    setAdded(false);
   }, [fragrance]);
 
   if (!fragrance) return null;
 
   const currentPrice = fragrance.prices[selectedSize];
 
-  const handleAdd = () => {
-    onAddToBag(fragrance, selectedSize);
-    setAdded(true);
-    setTimeout(() => setAdded(false), 2000);
+  const handleWhatsAppOrder = () => {
+    window.open(
+      buildWhatsAppOrderUrl(fragrance.name, selectedSize),
+      "_blank",
+      "noopener,noreferrer",
+    );
   };
 
   return (
@@ -173,20 +173,11 @@ export function FragranceModal({ fragrance, onClose, onAddToBag }: FragranceModa
             <div className="mt-6 flex gap-3">
               <button
                 type="button"
-                onClick={handleAdd}
+                onClick={handleWhatsAppOrder}
                 className="flex w-full items-center justify-center gap-2 bg-[#141311] py-3.5 text-xs font-medium uppercase tracking-[0.2em] text-[#FAF8F5] transition hover:opacity-90 cursor-pointer"
               >
-                {added ? (
-                  <>
-                    <Check className="h-4 w-4 text-emerald-400" />
-                    Added to Bag
-                  </>
-                ) : (
-                  <>
-                    <ShoppingBag className="h-4 w-4" />
-                    Add to Bag — ${currentPrice}
-                  </>
-                )}
+                <MessageCircle className="h-4 w-4" />
+                Order on WhatsApp
               </button>
             </div>
           </div>

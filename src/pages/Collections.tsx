@@ -1,9 +1,8 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
-import { Sparkles, Search, RotateCcw, ShoppingBag, ChevronDown } from "lucide-react";
-import { toast, Toaster } from "sonner";
+import { Sparkles, Search, RotateCcw, ChevronDown } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
-import { FRAGRANCES, type Fragrance, type BottleSize } from "@/data/fragrances";
+import { FRAGRANCES, type Fragrance } from "@/data/fragrances";
 import { FragranceCard } from "@/components/FragranceCard";
 import { FragranceModal } from "@/components/FragranceModal";
 
@@ -15,8 +14,6 @@ export function Collections() {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState<SortOption>("featured");
   const [selectedFragrance, setSelectedFragrance] = useState<Fragrance | null>(null);
-  const [cartCount, setCartCount] = useState<number>(0);
-  const [lastAdded, setLastAdded] = useState<string | null>(null);
 
   // Filter and sort items
   const filteredFragrances = useMemo(() => {
@@ -61,14 +58,6 @@ export function Collections() {
     return list;
   }, [activeFamily, searchQuery, sortBy]);
 
-  const handleAddToBag = (fragrance: Fragrance, size: BottleSize) => {
-    setCartCount((c) => c + 1);
-    setLastAdded(`${fragrance.name} (${size})`);
-    toast.success(`Added to Bag: ${fragrance.name} (${size})`, {
-      description: `$${fragrance.prices[size]} — Complimentary standard delivery & 2 samples included.`,
-    });
-  };
-
   const resetFilters = () => {
     setActiveFamily("all");
     setSearchQuery("");
@@ -77,28 +66,10 @@ export function Collections() {
 
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
-      <Toaster position="top-right" richColors />
       <SiteHeader />
 
-      {/* Floating Cart Indicator */}
-      {cartCount > 0 && (
-        <aside
-          aria-label="Shopping bag summary"
-          className="fixed bottom-6 right-6 z-40 flex items-center gap-3 rounded-full bg-[#161513] px-5 py-3 text-xs font-medium uppercase tracking-[0.18em] text-[#FAF8F5] shadow-xl backdrop-blur-md transition-all hover:opacity-95"
-        >
-          <ShoppingBag className="h-4 w-4 text-gold" />
-          <span>Bag ({cartCount})</span>
-          {lastAdded && (
-            <span className="hidden text-[10px] normal-case text-muted-foreground/80 md:inline">
-              • Last: {lastAdded}
-            </span>
-          )}
-          <span className="flex h-2 w-2 rounded-full bg-emerald-400" />
-        </aside>
-      )}
-
       {/* Hero Header Section */}
-      <section className="relative border-b border-[#ECE5D8] bg-[#F7F2E9] px-6 py-14 sm:py-20 lg:px-16 lg:py-24">
+      <section className="relative border-b border-[#ECE5D8] bg-[#F7F2E9] px-6 py-8 sm:py-10 lg:px-16 lg:py-12">
         <div className="mx-auto max-w-7xl">
           {/* Breadcrumbs */}
           <nav
@@ -112,16 +83,16 @@ export function Collections() {
             <span className="text-foreground font-medium">Collections</span>
           </nav>
 
-          <div className="mt-8 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div className="mt-5 flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <p className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.28em] text-gold">
                 <Sparkles className="h-3.5 w-3.5" />
                 Fragrance Gallery
               </p>
-              <h1 className="mt-4 font-display text-4xl font-normal tracking-tight sm:text-5xl lg:text-6xl text-[#1A1816]">
+              <h1 className="mt-2 font-display text-3xl font-normal tracking-tight text-[#1A1816] sm:text-4xl lg:text-5xl">
                 The Scent Collection
               </h1>
-              <p className="mt-4 max-w-xl text-sm font-light leading-relaxed text-[#4A453F] sm:text-base">
+              <p className="mt-2 max-w-xl text-sm font-light leading-relaxed text-[#4A453F]">
                 Explore our curated gallery of nine artisanal creations. Distilled from
                 dawn-harvested Grasse petals, rare resins, and aged botanical wood oils.
               </p>
@@ -131,7 +102,7 @@ export function Collections() {
       </section>
 
       {/* Main Filter & Gallery Content */}
-      <main className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-16 lg:py-16">
+      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-16 lg:py-12">
         {/* Filter Controls Bar */}
         <section
           aria-label="Filters and Sorting"
@@ -245,7 +216,6 @@ export function Collections() {
                 key={fragrance.id}
                 fragrance={fragrance}
                 onQuickView={(f) => setSelectedFragrance(f)}
-                onAddToBag={handleAddToBag}
               />
             ))}
           </div>
@@ -269,11 +239,7 @@ export function Collections() {
       </main>
 
       {/* Quick View Modal */}
-      <FragranceModal
-        fragrance={selectedFragrance}
-        onClose={() => setSelectedFragrance(null)}
-        onAddToBag={handleAddToBag}
-      />
+      <FragranceModal fragrance={selectedFragrance} onClose={() => setSelectedFragrance(null)} />
     </div>
   );
 }

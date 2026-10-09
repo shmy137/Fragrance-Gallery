@@ -1,23 +1,25 @@
 import { useState } from "react";
-import { Star, ShoppingBag, Eye } from "lucide-react";
+import { Star, MessageCircle, Eye } from "lucide-react";
 import { type Fragrance, type BottleSize } from "@/data/fragrances";
+import { buildWhatsAppOrderUrl } from "@/lib/whatsapp";
 
 interface FragranceCardProps {
   fragrance: Fragrance;
   onQuickView?: (fragrance: Fragrance) => void;
-  onAddToBag?: (fragrance: Fragrance, size: BottleSize) => void;
 }
 
-export function FragranceCard({ fragrance, onQuickView, onAddToBag }: FragranceCardProps) {
+export function FragranceCard({ fragrance, onQuickView }: FragranceCardProps) {
   const [selectedSize, setSelectedSize] = useState<BottleSize>("100ml");
 
   const currentPrice = fragrance.prices[selectedSize];
 
-  const handleAddClick = (e: React.MouseEvent) => {
+  const handleWhatsAppOrder = (e: React.MouseEvent) => {
     e.stopPropagation();
-    if (onAddToBag) {
-      onAddToBag(fragrance, selectedSize);
-    }
+    window.open(
+      buildWhatsAppOrderUrl(fragrance.name, selectedSize),
+      "_blank",
+      "noopener,noreferrer",
+    );
   };
 
   return (
@@ -132,15 +134,15 @@ export function FragranceCard({ fragrance, onQuickView, onAddToBag }: FragranceC
           <span className="font-display text-2xl font-normal text-[#141311]">${currentPrice}</span>
         </div>
 
-        {/* Add to Bag Direct Action */}
+        {/* WhatsApp Order Direct Action */}
         <div className="mt-4 pt-1">
           <button
             type="button"
-            onClick={handleAddClick}
+            onClick={handleWhatsAppOrder}
             className="flex w-full items-center justify-center gap-2 border border-foreground/30 bg-[#FAF7F2] py-2.5 text-[11px] font-medium uppercase tracking-[0.2em] text-foreground transition-all duration-200 hover:border-foreground hover:bg-[#141311] hover:text-[#FAF8F5]"
           >
-            <ShoppingBag className="h-3.5 w-3.5" />
-            Add to Bag — ${currentPrice}
+            <MessageCircle className="h-3.5 w-3.5" />
+            Order on WhatsApp
           </button>
         </div>
       </div>
