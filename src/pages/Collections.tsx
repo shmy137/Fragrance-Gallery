@@ -9,6 +9,24 @@ import { FragranceModal } from "@/components/FragranceModal";
 type FilterFamily = "all" | "floral" | "woody" | "oriental" | "fresh" | "private";
 type SortOption = "featured" | "price-asc" | "price-desc" | "rating";
 
+const FAMILY_FILTERS: { id: FilterFamily; label: string }[] = [
+  { id: "all", label: "All Fragrances" },
+  { id: "floral", label: "Floral Soliflore" },
+  { id: "oriental", label: "Oriental Amber" },
+  { id: "woody", label: "Woody Botanical" },
+  { id: "fresh", label: "Fresh & Citrus" },
+  { id: "private", label: "Private Blend" },
+];
+
+// Counts are derived from the catalogue so they can never drift from the data.
+const FAMILY_TABS = FAMILY_FILTERS.map((filter) => ({
+  ...filter,
+  count:
+    filter.id === "all"
+      ? FRAGRANCES.length
+      : FRAGRANCES.filter((fragrance) => fragrance.family === filter.id).length,
+}));
+
 export function Collections() {
   const [activeFamily, setActiveFamily] = useState<FilterFamily>("all");
   const [searchQuery, setSearchQuery] = useState("");
@@ -110,20 +128,13 @@ export function Collections() {
         >
           {/* Category Tabs */}
           <div className="flex flex-wrap items-center gap-2">
-            {[
-              { id: "all", label: "All Fragrances", count: 9 },
-              { id: "floral", label: "Floral Soliflore", count: 3 },
-              { id: "oriental", label: "Oriental Amber", count: 2 },
-              { id: "woody", label: "Woody Botanical", count: 2 },
-              { id: "fresh", label: "Fresh & Citrus", count: 1 },
-              { id: "private", label: "Private Blend", count: 1 },
-            ].map((tab) => {
+            {FAMILY_TABS.map((tab) => {
               const active = activeFamily === tab.id;
               return (
                 <button
                   key={tab.id}
                   type="button"
-                  onClick={() => setActiveFamily(tab.id as FilterFamily)}
+                  onClick={() => setActiveFamily(tab.id)}
                   className={`flex items-center gap-2 px-3.5 py-2 text-xs tracking-[0.14em] uppercase transition-colors cursor-pointer ${
                     active
                       ? "bg-[#141311] text-[#FAF8F5] font-medium shadow-xs"
@@ -201,7 +212,8 @@ export function Collections() {
         <div className="mb-6 flex items-center justify-between text-xs font-light text-muted-foreground">
           <p>
             Showing <span className="font-medium text-foreground">{filteredFragrances.length}</span>{" "}
-            of <span className="font-medium text-foreground">9</span> luxury fragrances
+            of <span className="font-medium text-foreground">{FRAGRANCES.length}</span> luxury
+            fragrances
           </p>
           <p className="hidden text-[11px] tracking-wider uppercase sm:block">
             Standard 100ml / 50ml Available

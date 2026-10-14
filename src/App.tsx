@@ -29,8 +29,7 @@ export function App() {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/collections" element={<Collections />} />
-        <Route path="/products" element={<Collections />} />
-        <Route path="/gallery" element={<Collections />} />
+        
       </Routes>
     </BrowserRouter>
   );

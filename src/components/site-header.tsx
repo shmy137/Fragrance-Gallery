@@ -1,52 +1,52 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 
-type NavItem = { label: string; to?: string; href?: string };
-
-const nav: NavItem[] = [
+// `to` = real page route, `section` = id of a section on the home page
+const nav = [
   { label: "Home", to: "/" },
-  { label: "About Us", href: "/#about" },
-  { label: "Collections", href: "/#collections" },
-  // { label: "Gift Sets", to: "/collections" },
-  { label: "Contact", href: "#contact" },
+  { label: "About Us", section: "about" },
+  { label: "Collections", section: "collections" },
+  { label: "Contact", section: "contact" },
 ];
-
-function NavEntry({
-  item,
-  className,
-  onNavigate,
-}: {
-  item: NavItem;
-  className: string;
-  onNavigate?: () => void;
-}) {
-  const inner = <>{item.label}</>;
-  const handleClick = () => onNavigate?.();
-
-  return item.to ? (
-    <Link to={item.to} className={className} onClick={handleClick}>
-      {inner}
-    </Link>
-  ) : item.href ? (
-    <a href={item.href} className={className} onClick={handleClick}>
-      {inner}
-    </a>
-  ) : (
-    <a href="#" className={className} onClick={handleClick}>
-      {inner}
-    </a>
-  );
-}
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation();
+  const { pathname, state } = useLocation();
+  const navigate = useNavigate();
 
+  const scrollToSection = (id: string) =>
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+
+  // After navigating to the home page from another page, scroll to the requested section
   useEffect(() => {
+    if (state?.scrollTo) scrollToSection(state.scrollTo);
+  }, [pathname, state]);
+
+  const goToSection = (e: React.MouseEvent, id: string) => {
+    e.preventDefault();
     setMenuOpen(false);
-  }, [location.pathname, location.hash]);
+
+    // Wait for the mobile menu to close (it locks page scroll while open)
+    setTimeout(() => {
+      if (document.getElementById(id)) scrollToSection(id);
+      else navigate("/", { state: { scrollTo: id } });
+    }, 300);
+  };
+
+  const renderLinks = (className: string) =>
+    nav.map(({ label, to, section }) =>
+      to ? (
+        <Link key={label} to={to} className={className} onClick={() => setMenuOpen(false)}>
+          {label}
+        </Link>
+      ) : (
+        <a key={label} href={`/#${section}`} className={className} onClick={(e) => goToSection(e, section!)}>
+          {label}
+        </a>
+      )
+    );
 
   return (
     <header className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-4 sm:px-6 lg:flex lg:justify-between lg:px-16 lg:py-5">
@@ -61,14 +61,10 @@ export function SiteHeader() {
           </span>
         </span>
       </Link>
+
+      {/* Desktop nav */}
       <nav className="hidden gap-9 text-sm uppercase tracking-[0.15em] lg:flex">
-        {nav.map((n) => (
-          <NavEntry
-            key={n.label}
-            item={n}
-            className="flex items-center gap-1 transition-colors hover:text-gold"
-          />
-        ))}
+        {renderLinks("flex items-center gap-1 transition-colors hover:text-gold")}
       </nav>
 
       {/* Mobile hamburger */}
@@ -90,14 +86,9 @@ export function SiteHeader() {
               <SheetTitle className="font-display text-lg tracking-[0.3em]">MENU</SheetTitle>
             </SheetHeader>
             <nav className="flex flex-col px-6 py-4">
-              {nav.map((n) => (
-                <NavEntry
-                  key={n.label}
-                  item={n}
-                  onNavigate={() => setMenuOpen(false)}
-                  className="flex items-center justify-between border-b border-foreground/5 py-4 text-sm uppercase tracking-[0.15em] transition-colors hover:text-gold"
-                />
-              ))}
+              {renderLinks(
+                "flex items-center justify-between border-b border-foreground/5 py-4 text-sm uppercase tracking-[0.15em] transition-colors hover:text-gold"
+              )}
             </nav>
           </SheetContent>
         </Sheet>

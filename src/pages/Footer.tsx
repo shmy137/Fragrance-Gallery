@@ -1,16 +1,11 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, type FormEvent } from "react";
 import { ArrowRight } from "lucide-react";
 
-interface FooterProps {
-  showCta?: boolean;
-}
-
-export function Footer({ showCta = true }: FooterProps) {
+export function Footer() {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!email.trim()) return;
     setSubscribed(true);

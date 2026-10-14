@@ -85,12 +85,6 @@ export function Index() {
           <h1 className="mt-6 font-display text-5xl leading-tight lg:text-7xl">{slide.title}</h1>
           <p className="mt-6 max-w-xs text-lg font-light">{slide.text}</p>
           <div className="mt-10 flex flex-wrap gap-4">
-            {/* <Link
-              to="/collections"
-              className="bg-primary px-8 py-4 text-xs font-medium uppercase tracking-widest text-primary-foreground transition-opacity hover:opacity-85"
-            >
-              Shop Now
-            </Link> */}
             <Link
               to="/collections"
               className="border border-foreground/40 bg-background/60 px-8 py-4 text-xs font-medium uppercase tracking-widest transition-colors hover:border-foreground"

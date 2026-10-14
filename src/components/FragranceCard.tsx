@@ -45,7 +45,7 @@ export function FragranceCard({ fragrance, onQuickView }: FragranceCardProps) {
         <div className="absolute inset-x-0 bottom-0 flex translate-y-full items-center justify-center bg-gradient-to-t from-black/50 to-transparent p-3 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
           <button
             type="button"
-            onClick={() => onQuickView && onQuickView(fragrance)}
+            onClick={() => onQuickView?.(fragrance)}
             className="flex items-center gap-1.5 rounded-none bg-[#FAF7F2] px-4 py-2 text-[11px] font-medium uppercase tracking-[0.18em] text-[#1A1816] shadow-sm transition-colors hover:bg-white"
           >
             <Eye className="h-3.5 w-3.5" />
