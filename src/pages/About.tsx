@@ -1,11 +1,80 @@
+import { useEffect, useRef, useState } from "react";
 import atelier from "@/assets/about-atelier.jpg";
 
-const stats = [
-  { value: "2007", label: "House founded" },
-  { value: "9", label: "Signature compositions" },
-  { value: "42", label: "Raw materials, known by name" },
-  { value: "6 wks", label: "Resting every batch" },
+const stats: { value: number; suffix?: string; label: string }[] = [
+  { value: 2026, label: "House founded" },
+  { value: 2863, suffix: "+", label: "Signature compositions sold" },
+  { value: 2, label: "Countries we deliver to" },
+  { value: 6, label: "Signature Collections" },
 ];
+
+function formatCount(value: number) {
+  return value.toLocaleString("en-US");
+}
+
+function CountUp({
+  value,
+  suffix,
+  duration = 1800,
+  className,
+}: {
+  value: number;
+  suffix?: string;
+  duration?: number;
+  className?: string;
+}) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const [display, setDisplay] = useState(0);
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
+    const reduced =
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reduced || typeof IntersectionObserver === "undefined") {
+      setDisplay(value);
+      return;
+    }
+
+    let frame = 0;
+    const start = () => {
+      const startedAt = performance.now();
+      const tick = (now: number) => {
+        const t = Math.min((now - startedAt) / duration, 1);
+        const eased = 1 - Math.pow(1 - t, 3);
+        setDisplay(Math.round(value * eased));
+        if (t < 1) frame = requestAnimationFrame(tick);
+      };
+      frame = requestAnimationFrame(tick);
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          observer.disconnect();
+          start();
+        }
+      },
+      { threshold: 0.4 },
+    );
+    observer.observe(node);
+
+    return () => {
+      observer.disconnect();
+      cancelAnimationFrame(frame);
+    };
+  }, [value, duration]);
+
+  return (
+    <span ref={ref} className={className} aria-label={`${formatCount(value)}${suffix ?? ""}`}>
+      {formatCount(display)}
+      {suffix}
+    </span>
+  );
+}
 
 export function About() {
   return (
@@ -57,7 +126,11 @@ export function About() {
             >
               <dt className="sr-only">{s.label}</dt>
               <dd>
-                <span className="block font-display text-4xl text-gold lg:text-5xl">{s.value}</span>
+                <CountUp
+                  value={s.value}
+                  suffix={s.suffix}
+                  className="block font-display text-4xl text-gold lg:text-5xl"
+                />
                 <span className="mt-3 block text-[11px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
                   {s.label}
                 </span>
