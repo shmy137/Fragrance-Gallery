@@ -8,7 +8,9 @@ const nav = [
   { label: "Home", to: "/" },
   { label: "About Us", section: "about" },
   { label: "Collections", section: "collections" },
+  { label: "Giveaway", to: "/giveaway" },
   { label: "Contact", section: "contact" },
+  
 ];
 
 export function SiteHeader() {
