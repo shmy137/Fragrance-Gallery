@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Gift, CalendarDays, ExternalLink, ScrollText, ListChecks, Users } from "lucide-react";
+import { CalendarDays, ExternalLink, ScrollText, ListChecks, Users } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { Footer } from "./Footer";
 import { GIVEAWAY, GIVEAWAY_DEADLINE_ISO } from "@/data/giveaway";
@@ -62,21 +62,34 @@ export function Giveaway() {
             <span className="font-medium text-foreground">Giveaway</span>
           </nav>
 
-          <p className="mt-5 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.28em] text-gold">
-            <Gift className="h-3.5 w-3.5" />
-            {GIVEAWAY.eyebrow}
-          </p>
-          <h1 className="mt-2 font-display text-3xl font-normal tracking-tight text-[#1A1816] sm:text-4xl lg:text-5xl">
-            {GIVEAWAY.heading}
-          </h1>
-          <p className="mt-4 max-w-2xl text-sm font-light leading-relaxed text-[#4A453F]">
-            {GIVEAWAY.pageIntro}
-          </p>
+          {/* Countdown timer */}
+          <div className="mt-6 rounded-lg border border-[#E6DFD2] bg-[#FAF7F2] p-5 sm:p-6">
+            <div className="flex flex-wrap items-center justify-between gap-2 text-[10px] font-medium uppercase tracking-[0.24em] text-[#7A5E2E]">
+              <span>Giveaway ends in</span>
+              <span className="flex items-center gap-2">
+                <CalendarDays className="h-3.5 w-3.5 text-gold" />
+                {GIVEAWAY.closingDateLabel}
+              </span>
+            </div>
+
+            {countdown.expired ? (
+              <p className="mt-4 font-display text-2xl text-[#1A1816]">
+                This giveaway has now closed.
+              </p>
+            ) : (
+              <div className="mt-4 grid max-w-lg grid-cols-4 gap-3">
+                <CountdownUnit value={countdown.days} label="Days" />
+                <CountdownUnit value={countdown.hours} label="Hours" />
+                <CountdownUnit value={countdown.minutes} label="Minutes" />
+                <CountdownUnit value={countdown.seconds} label="Seconds" />
+              </div>
+            )}
+          </div>
 
           <p className="mt-6 rounded-sm border border-dashed border-[#C9B98E] bg-[#FBF6EA] px-4 py-3 text-xs leading-relaxed text-[#7A5E2E]">
             <strong className="font-medium">Draft content:</strong> the prize, closing date,
-            eligibility, entry method and terms shown on this page are placeholders. They must be
-            replaced with approved details before the page is published.
+            eligibility and entry method shown on this page are placeholders. They must be replaced
+            with approved details before the page is published.
           </p>
         </div>
       </section>
@@ -103,26 +116,6 @@ export function Giveaway() {
           </div>
         </div>
 
-        <div className="mt-10 rounded-lg border border-[#E6DFD2] bg-[#FAF7F2] p-6 text-center lg:p-8">
-          <p className="flex items-center justify-center gap-2 text-[10px] font-medium uppercase tracking-[0.24em] text-[#7A5E2E]">
-            <CalendarDays className="h-3.5 w-3.5 text-gold" />
-            {GIVEAWAY.closingDateLabel}
-          </p>
-
-          {countdown.expired ? (
-            <p className="mt-5 font-display text-2xl text-[#1A1816]">
-              This giveaway has now closed.
-            </p>
-          ) : (
-            <div className="mx-auto mt-5 grid max-w-lg grid-cols-4 gap-3">
-              <CountdownUnit value={countdown.days} label="Days" />
-              <CountdownUnit value={countdown.hours} label="Hours" />
-              <CountdownUnit value={countdown.minutes} label="Minutes" />
-              <CountdownUnit value={countdown.seconds} label="Seconds" />
-            </div>
-          )}
-        </div>
-
         <Section icon={<ListChecks className="h-5 w-5" />} title="How to enter">
           <ol className="space-y-3">
             {GIVEAWAY.entryInstructions.map((step, index) => (
@@ -147,7 +140,7 @@ export function Giveaway() {
           </ul>
         </Section>
 
-        <Section icon={<ScrollText className="h-5 w-5" />} title="Terms and conditions">
+        <Section icon={<ScrollText className="h-5 w-5" />} title="Conditions Apply">
           <ul className="list-disc space-y-2 pl-5 text-sm font-light leading-relaxed text-[#4A453F]">
             {GIVEAWAY.terms.map((item) => (
               <li key={item}>{item}</li>

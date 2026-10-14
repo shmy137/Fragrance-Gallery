@@ -2,9 +2,10 @@
  * Giveaway configuration — the single source of truth for the promotion.
  *
  * ⚠️ PLACEHOLDER CONTENT
- * Every value below is a placeholder. The business must approve and replace
- * the real prize, deadline, eligibility, entry method and terms before the
- * /giveaway page is published or the promotion is announced.
+ * Most values below are placeholders. The business must approve and replace
+ * the real prize, deadline, eligibility and entry method before the /giveaway
+ * page is published or the promotion is announced. The Terms and Conditions
+ * ("Conditions Apply") have been supplied by the business.
  */
 
 /**
@@ -65,11 +66,14 @@ export const GIVEAWAY: GiveawayConfig = {
     "One entry per person unless otherwise stated.",
   ],
 
-  // TODO(business): confirm the final terms with the business.
   terms: [
-    "These terms are placeholders and must be reviewed before publication.",
-    "The prize is non-transferable and no cash alternative is offered.",
-    "The winner will be selected and notified as set out in the final terms.",
+    "This offer is valid only on purchase of this product mentioned here.",
+    "This is a promotional scheme/offer.",
+    "All taxes as per government rules will be applicable on all gifts.",
+    "The registration fee and other expenses for the prize must be borne by the winner.",
+    "This coupon is valid until the scheme lasts.",
+    "The company reserves the right to postpone the lucky draw date.",
+    "If a customer is dissatisfied with the Lucky Draw Terms and Conditions of the lucky draw, the sole and exclusive remedy is not to participate in the lucky draw.",
   ],
 
   entryActionLabel: "Enter the Giveaway",

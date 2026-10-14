@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-
+import logo from "@/assets/logo-fgt.png";
 // `to` = real page route, `section` = id of a section on the home page
 const nav = [
   { label: "Home", to: "/" },
@@ -52,8 +52,12 @@ export function SiteHeader() {
 
   return (
     <header className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-4 sm:px-6 lg:flex lg:justify-between lg:px-16 lg:py-5">
-      <Link to="/" className="flex min-w-0 items-center gap-3 lg:gap-4">
-        <span className="shrink-0 font-display text-3xl italic text-gold lg:text-4xl">FG</span>
+      <Link to="/" className="flex min-w-0 items-center gap-2 lg:gap-2.5">
+        <img
+          src={logo}
+          alt="Fragrance Gallery logo"
+          className="h-10 w-auto shrink-0 object-contain lg:h-12"
+        />
         <span className="min-w-0 text-center leading-none">
           <span className="block truncate font-display text-lg tracking-[0.25em] sm:text-xl lg:tracking-[0.3em]">
             FRAGRANCE
