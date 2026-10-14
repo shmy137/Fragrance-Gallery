@@ -19,6 +19,8 @@ export function FragranceModal({ fragrance, onClose }: FragranceModalProps) {
 
   const currentPrice = fragrance.prices[selectedSize];
 
+  const bottleSizes: BottleSize[] = ["100ml", "50ml"];
+
   const handleWhatsAppOrder = () => {
     window.open(
       buildWhatsAppOrderUrl(fragrance.name, selectedSize),
@@ -89,24 +91,18 @@ export function FragranceModal({ fragrance, onClose }: FragranceModalProps) {
 
             {/* Olfactory pyramid */}
             <div className="mt-5 space-y-1.5 rounded-sm border border-[#E6DFD2] bg-[#F2EDE4] p-3.5 text-xs">
-              <p>
-                <span className="font-semibold uppercase tracking-[0.12em] text-[#7A5E2E]">
-                  TOP:
-                </span>{" "}
-                <span className="font-light text-[#2F2C28]">{fragrance.topNotes}</span>
-              </p>
-              <p>
-                <span className="font-semibold uppercase tracking-[0.12em] text-[#7A5E2E]">
-                  HEART:
-                </span>{" "}
-                <span className="font-light text-[#2F2C28]">{fragrance.heartNotes}</span>
-              </p>
-              <p>
-                <span className="font-semibold uppercase tracking-[0.12em] text-[#7A5E2E]">
-                  BASE:
-                </span>{" "}
-                <span className="font-light text-[#2F2C28]">{fragrance.baseNotes}</span>
-              </p>
+              {[
+                { label: "TOP", value: fragrance.topNotes },
+                { label: "HEART", value: fragrance.heartNotes },
+                { label: "BASE", value: fragrance.baseNotes },
+              ].map((note) => (
+                <p key={note.label}>
+                  <span className="font-semibold uppercase tracking-[0.12em] text-[#7A5E2E]">
+                    {note.label}:
+                  </span>{" "}
+                  <span className="font-light text-[#2F2C28]">{note.value}</span>
+                </p>
+              ))}
             </div>
 
             {/* Main accords pills */}
@@ -134,28 +130,20 @@ export function FragranceModal({ fragrance, onClose }: FragranceModalProps) {
                   Select Size
                 </p>
                 <div className="flex gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setSelectedSize("100ml")}
-                    className={`px-3 py-1.5 text-xs transition cursor-pointer ${
-                      selectedSize === "100ml"
-                        ? "bg-[#141311] font-medium text-[#FAF8F5]"
-                        : "border border-[#D9D1C2] bg-white/90 text-[#4A453F]"
-                    }`}
-                  >
-                    100ml
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setSelectedSize("50ml")}
-                    className={`px-3 py-1.5 text-xs transition cursor-pointer ${
-                      selectedSize === "50ml"
-                        ? "bg-[#141311] font-medium text-[#FAF8F5]"
-                        : "border border-[#D9D1C2] bg-white/90 text-[#4A453F]"
-                    }`}
-                  >
-                    50ml
-                  </button>
+                  {bottleSizes.map((size) => (
+                    <button
+                      key={size}
+                      type="button"
+                      onClick={() => setSelectedSize(size)}
+                      className={`px-3 py-1.5 text-xs transition cursor-pointer ${
+                        selectedSize === size
+                          ? "bg-[#141311] font-medium text-[#FAF8F5]"
+                          : "border border-[#D9D1C2] bg-white/90 text-[#4A453F]"
+                      }`}
+                    >
+                      {size}
+                    </button>
+                  ))}
                 </div>
               </div>
 
