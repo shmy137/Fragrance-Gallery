@@ -2,7 +2,9 @@ import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Index } from "./pages/Index";
 import { Collections } from "./pages/Collections";
+import { Giveaway } from "./pages/Giveaway";
 import { HomeButton } from "./components/HomeButton";
+import { GiveawayCard } from "./components/GiveawayCard";
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -26,9 +28,11 @@ export function App() {
     <BrowserRouter>
       <ScrollToTop />
       <HomeButton />
+      <GiveawayCard />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/collections" element={<Collections />} />
+        <Route path="/giveaway" element={<Giveaway />} />
         
       </Routes>
     </BrowserRouter>
