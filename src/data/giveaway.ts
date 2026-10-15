@@ -17,8 +17,14 @@
  * Both countdowns (the floating card and the /giveaway page) read this single
  * value, so the deadline only ever needs to be changed here. It is a fixed
  * point in time, so it does not restart on page refresh, remount or reopen.
+ *
+ * Supported formats:
+ *   "2027-12-31"                  end of that day, local time
+ *   "2027-12-31T23:59"            local time
+ *   "2027-12-31T23:59:59Z"        UTC
+ *   "2027-12-31T23:59:59+05:30"   explicit offset (IST)
  */
-export const GIVEAWAY_DEADLINE_ISO = "2026-12-31T23:59:59Z"; // PLACEHOLDER
+export const GIVEAWAY_DEADLINE_ISO = "2026-11-31T23:59:59Z"; // PLACEHOLDER
 
 export interface GiveawayConfig {
   brand: string;
