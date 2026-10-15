@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { ArrowRight } from "lucide-react";
+import logo from "@/assets/logo-fgt.png";
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -21,12 +22,11 @@ export function Footer() {
             {/* Brand column */}
             <div className="lg:col-span-6">
               <a href="/" className="inline-block">
-                <span className="block font-display text-2xl font-normal tracking-[0.25em] text-foreground">
-                  FRAGRANCE
-                </span>
-                <span className="block text-[9px] uppercase tracking-[0.35em] text-muted-foreground">
-                  Gallery
-                </span>
+                <img
+                  src={logo}
+                  alt="Fragrance Gallery"
+                  className="h-12 w-auto max-w-full object-contain"
+                />
               </a>
               <p className="mt-6 max-w-sm text-sm font-light leading-relaxed text-muted-foreground">
                 Luxury perfumes crafted to inspire confidence and elegance.
