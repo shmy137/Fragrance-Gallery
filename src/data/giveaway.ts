@@ -1,29 +1,4 @@
-/**
- * Giveaway configuration — the single source of truth for the promotion.
- *
- * ⚠️ PLACEHOLDER CONTENT
- * Most values below are placeholders. The business must approve and replace
- * the real prize, deadline, eligibility and entry method before the /giveaway
- * page is published or the promotion is announced. The Terms and Conditions
- * ("Conditions Apply") have been supplied by the business.
- */
 
-/**
- * The real, fixed closing date/time of the giveaway, written as an ISO 8601
- * string with an explicit timezone, e.g. "2026-11-30T23:59:59+05:30".
- *
- * TODO(business): replace this placeholder with the confirmed deadline.
- *
- * Both countdowns (the floating card and the /giveaway page) read this single
- * value, so the deadline only ever needs to be changed here. It is a fixed
- * point in time, so it does not restart on page refresh, remount or reopen.
- *
- * Supported formats:
- *   "2027-12-31"                  end of that day, local time
- *   "2027-12-31T23:59"            local time
- *   "2027-12-31T23:59:59Z"        UTC
- *   "2027-12-31T23:59:59+05:30"   explicit offset (IST)
- */
 export const GIVEAWAY_DEADLINE_ISO = "2026-11-31T23:59:59Z"; // PLACEHOLDER
 
 export interface GiveawayConfig {
