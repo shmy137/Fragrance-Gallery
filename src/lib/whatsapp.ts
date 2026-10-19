@@ -1,6 +1,6 @@
 import type { BottleSize } from "@/data/fragrances";
 
-const WHATSAPP_NUMBER = "918590727887";
+const WHATSAPP_NUMBER = "+916282835003";
 
 export function buildWhatsAppMessageUrl(message: string): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;

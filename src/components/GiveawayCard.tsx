@@ -3,9 +3,11 @@ import { Link, useLocation } from "react-router-dom";
 import { X } from "lucide-react";
 import { GIVEAWAY_DEADLINE_ISO } from "@/data/giveaway";
 import { useCountdown } from "@/lib/useCountdown";
-import prize from "@/assets/Fragrance-Giveaway.jpg.jpeg";
 
 const REVEAL_DELAY_MS = 2500;
+
+const prize =
+  "https://res.cloudinary.com/mpfeep2s/image/upload/v1792406126/Fragrance-Giveaway.jpg.jpg";
 
 const pad = (value: number) => String(value).padStart(2, "0");
 

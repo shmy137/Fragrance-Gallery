@@ -2,6 +2,14 @@
 @source "../src";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "Anek Malayalam";
+  src: url("./assets/AnekMalayalam-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 /*
@@ -30,6 +38,8 @@
   --color-gold: var(--gold);
   --font-display: "Playfair Display", serif;
   --font-sans: "Jost", sans-serif;
+  --font-nav: "Cormorant Garamond", serif;
+  --font-anek: "Anek Malayalam", sans-serif;
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
