@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 import { FRAGRANCES, type Fragrance } from "@/data/fragrances";
 import { FragranceCard } from "@/components/FragranceCard";
 import { FragranceModal } from "@/components/FragranceModal";
+import { useSeo, JsonLd, buildProductsJsonLd } from "@/lib/seo";
 
 type FilterFamily = "all" | "floral" | "woody" | "oriental" | "fresh" | "private";
 type SortOption = "featured" | "price-asc" | "price-desc" | "rating";
@@ -27,7 +28,17 @@ const FAMILY_TABS = FAMILY_FILTERS.map((filter) => ({
       : FRAGRANCES.filter((fragrance) => fragrance.family === filter.id).length,
 }));
 
+const PRODUCTS_JSON_LD = buildProductsJsonLd(FRAGRANCES);
+
 export function Collections() {
+  useSeo({
+    title: "The Scent Collection — Fragrance Gallery",
+    description:
+      "Browse the Fragrance Gallery scent collection of nine artisanal perfumes. Filter floral, woody, oriental, fresh and private blends, with notes and pricing.",
+    path: "/collections",
+    image: "/logo-fgt.png",
+  });
+
   const [activeFamily, setActiveFamily] = useState<FilterFamily>("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState<SortOption>("featured");
@@ -252,6 +263,8 @@ export function Collections() {
 
       {/* Quick View Modal */}
       <FragranceModal fragrance={selectedFragrance} onClose={() => setSelectedFragrance(null)} />
+
+      <JsonLd data={PRODUCTS_JSON_LD} />
     </div>
   );
 }
