@@ -17,12 +17,12 @@ import { About } from "./About";
 import { CTABanner } from "./CTABanner";
 import { Footer } from "./Footer";
 import hero from "@/assets/hero.png";
-import hero2 from "@/assets/hero-2.jpg";
-import hero3 from "@/assets/hero-3.jpg";
+import hero2 from "@/assets/hero-2.png";
+import hero3 from "@/assets/hero-3.png";
 
 const slides = [
   {
-    image: hero,
+    image: "https://res.cloudinary.com/mpfeep2s/image/upload/v1792405349/hero.png",
     alt: "Scenté perfume bottles with peonies",
     tag: "New Collection",
     title: (
@@ -40,9 +40,9 @@ const slides = [
     tag: "Best Seller",
     title: (
       <>
-        Velvet Orchid
+        Sunset Crush
         <br />
-        <em className="text-gold">Warm &amp; Timeless</em>
+        <em className="text-gold">Warm &amp; <br className="sm:hidden" />Timeless</em>
       </>
     ),
     text: "Golden amber and rare orchids wrapped in pure sophistication.",
@@ -89,7 +89,7 @@ export function Index() {
           />
         ))}
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/20 lg:from-background/90 lg:via-background/50 lg:to-transparent" />
-        <div className="relative w-full px-6 py-16 lg:px-16 lg:py-20">
+        <div className="relative w-full px-6 py-0 sm:py-8 lg:px-16 lg:py-8">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-gold">{slide.tag}</p>
           <h1 className="mt-6 min-h-[2.5em] font-display text-4xl leading-tight min-[420px]:text-5xl sm:whitespace-nowrap lg:text-6xl">{slide.title}</h1>
           <p className="mt-6 min-h-[3em] max-w-xs text-lg font-light">{slide.text}</p>
