@@ -50,7 +50,7 @@ export function FragranceCard({ fragrance, onQuickView, availableSizes = SIZES }
           src={fragrance.image}
           alt={`${fragrance.name} - ${fragrance.category}`}
           loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          className="h-full w-full object-contain p-4 transition-transform duration-700 ease-out"
         />
 
        
