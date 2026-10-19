@@ -76,7 +76,7 @@ export function Index() {
     <div className="min-h-screen bg-background font-sans">
       <SiteHeader />
 
-      <section className="relative overflow-hidden">
+      <section className="relative flex min-h-[34rem] items-center overflow-hidden sm:min-h-[36rem] lg:min-h-[38rem]">
         {slides.map((s, i) => (
           <img
             key={s.alt}
@@ -85,14 +85,14 @@ export function Index() {
             width={1920}
             height={832}
             loading={i === 0 ? "eager" : "lazy"}
-            className={`absolute inset-0 h-full w-full object-cover object-[33%_center] transition-opacity duration-700 lg:object-right ${i === active ? "opacity-100" : "opacity-0"}`}
+            className={`absolute inset-0 h-full w-full object-cover object-[62%_center] transition-opacity duration-700 lg:object-right ${i === active ? "opacity-100" : "opacity-0"}`}
           />
         ))}
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/20 lg:from-background/90 lg:via-background/50 lg:to-transparent" />
-        <div className="relative px-6 py-24 lg:px-16 lg:py-28">
+        <div className="relative w-full px-6 py-16 lg:px-16 lg:py-20">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-gold">{slide.tag}</p>
-          <h1 className="mt-6 min-h-[3.75em] font-display text-5xl leading-tight lg:whitespace-nowrap lg:min-h-[2.5em] lg:text-7xl">{slide.title}</h1>
-          <p className="mt-6 min-h-[4.5em] max-w-xs text-lg font-light">{slide.text}</p>
+          <h1 className="mt-6 min-h-[2.5em] font-display text-4xl leading-tight min-[420px]:text-5xl sm:whitespace-nowrap lg:text-6xl">{slide.title}</h1>
+          <p className="mt-6 min-h-[3em] max-w-xs text-lg font-light">{slide.text}</p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
               to="/collections"
@@ -101,7 +101,7 @@ export function Index() {
               Explore Collection
             </Link>
           </div>
-          <div className="mt-16 flex gap-3">
+          <div className="mt-14 flex gap-3">
             {slides.map((s, i) => (
               <button
                 key={s.alt}

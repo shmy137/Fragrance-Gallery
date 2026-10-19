@@ -36,7 +36,7 @@ export const FRAGRANCES: Fragrance[] = [
     prices: {
       "100ml": 1000,
     },
-    image: ensoImg,
+    image: "https://res.cloudinary.com/mpfeep2s/image/upload/v1792162644/GOLDEN_AMBER.jpg",
   },
   {
     id: "enso-blue-legend-a1",
@@ -50,7 +50,7 @@ export const FRAGRANCES: Fragrance[] = [
     prices: {
       "100ml": 1000,
     },
-    image: velvetOrchidImg,
+    image: "https://res.cloudinary.com/mpfeep2s/image/upload/v1792162644/BLUE_LEGEND_PURE_A1.jpg",
   },
   {
     id: "enso-blue-legend-b2",
@@ -64,7 +64,7 @@ export const FRAGRANCES: Fragrance[] = [
     prices: {
       "100ml": 1000,
     },
-    image: veridanImg,
+    image: "https://res.cloudinary.com/mpfeep2s/image/upload/v1792162644/BLUE_LEGEND_NOIR_B2.jpg",
   },
   {
     id: "enso-exotic",
@@ -78,7 +78,7 @@ export const FRAGRANCES: Fragrance[] = [
     prices: {
       "100ml": 1000,
     },
-    image: santalImg,
+    image: "https://res.cloudinary.com/mpfeep2s/image/upload/v1792162644/EXOTIC.jpg",
   },
   {
     id: "enso-sunset-crush",
@@ -92,6 +92,6 @@ export const FRAGRANCES: Fragrance[] = [
     prices: {
       "100ml": 1000,
     },
-    image: fleurNuitImg,
+    image: "https://res.cloudinary.com/mpfeep2s/image/upload/v1792403551/SUNSET_CRUSH.png",
   },
 ];

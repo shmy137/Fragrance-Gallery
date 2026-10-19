@@ -18,7 +18,7 @@
  * value, so the deadline only ever needs to be changed here. It is a fixed
  * point in time, so it does not restart on page refresh, remount or reopen.
  */
-export const GIVEAWAY_DEADLINE_ISO = "2026-12-31T23:59:59Z"; // PLACEHOLDER
+export const GIVEAWAY_DEADLINE_ISO = "2027-04-30T23:59:59+05:30";
 
 export interface GiveawayConfig {
   brand: string;
@@ -49,7 +49,6 @@ export const GIVEAWAY: GiveawayConfig = {
   prizeDescription:
     "The prize plots numbered 1–5 are shown above. Additional prize plots 6–20 follow the same layout below.",
 
-
   closingDateLabel: "30 April 2027",
 
   // TODO(business): confirm the official entry method.
@@ -57,8 +56,6 @@ export const GIVEAWAY: GiveawayConfig = {
     "Tap the button above to purchase perfume based on your interest through our WhatsApp concierge.",
     "The official entry method, and any required details, will be confirmed by Fragrance Gallery.",
   ],
-
-
 
   terms: [
     "This offer is valid only on purchase of this product mentioned here.",
