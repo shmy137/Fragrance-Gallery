@@ -183,7 +183,7 @@ export function Giveaway() {
             </h2>
           </article>
 
-          <div className="grid grid-cols-1 gap-x-20 gap-y-30 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-20 sm:gap-y-30 lg:grid-cols-3">
             {prizes.map(({ number, string, image, size, cardClass, imgClass }) => (
               <article
                 key={number}
