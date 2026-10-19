@@ -3,6 +3,13 @@ import { X, Star, MessageCircle, Sparkles } from "lucide-react";
 import { type Fragrance, type BottleSize } from "@/data/fragrances";
 import { buildWhatsAppOrderUrl } from "@/lib/whatsapp";
 
+const formatINR = (amount: number) =>
+  new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    maximumFractionDigits: 0,
+  }).format(amount);
+
 interface FragranceModalProps {
   fragrance: Fragrance | null;
   onClose: () => void;
@@ -19,7 +26,7 @@ export function FragranceModal({ fragrance, onClose }: FragranceModalProps) {
 
   const currentPrice = fragrance.prices[selectedSize];
 
-  const bottleSizes: BottleSize[] = ["100ml", "50ml"];
+  const bottleSizes: BottleSize[] = ["100ml"];
 
   const handleWhatsAppOrder = () => {
     window.open(
@@ -58,11 +65,6 @@ export function FragranceModal({ fragrance, onClose }: FragranceModalProps) {
               alt={fragrance.name}
               className="h-full w-full object-cover"
             />
-            <div className="absolute left-4 top-4">
-              <span className="bg-[#866838] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#FAF7F0]">
-                {fragrance.badge}
-              </span>
-            </div>
           </div>
 
           {/* Details Column */}
@@ -81,13 +83,6 @@ export function FragranceModal({ fragrance, onClose }: FragranceModalProps) {
             <h2 id="modal-title" className="mt-2 font-display text-3xl font-normal text-[#1A1816]">
               {fragrance.name}
             </h2>
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
-              {fragrance.concentration}
-            </p>
-
-            <p className="mt-4 text-xs font-light leading-relaxed text-[#4A453F]">
-              {fragrance.description}
-            </p>
 
             {/* Olfactory pyramid */}
             <div className="mt-5 space-y-1.5 rounded-sm border border-[#E6DFD2] bg-[#F2EDE4] p-3.5 text-xs">
@@ -103,58 +98,6 @@ export function FragranceModal({ fragrance, onClose }: FragranceModalProps) {
                   <span className="font-light text-[#2F2C28]">{note.value}</span>
                 </p>
               ))}
-            </div>
-
-            {/* Main accords pills */}
-            <div className="mt-4">
-              <p className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground font-medium">
-                Olfactory Accords
-              </p>
-              <div className="mt-2 flex flex-wrap gap-1.5">
-                {fragrance.accords.map((a) => (
-                  <span
-                    key={a}
-                    className="inline-flex items-center gap-1 border border-[#E0D7C8] bg-white/70 px-2.5 py-0.5 text-[10px] uppercase tracking-wider text-[#4A453F]"
-                  >
-                    <Sparkles className="h-2.5 w-2.5 text-[#9E7A3E]" />
-                    {a}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Size selector & Price */}
-            <div className="mt-6 flex items-center justify-between border-t border-[#E8E2D6] pt-4">
-              <div>
-                <p className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground mb-1.5">
-                  Select Size
-                </p>
-                <div className="flex gap-2">
-                  {bottleSizes.map((size) => (
-                    <button
-                      key={size}
-                      type="button"
-                      onClick={() => setSelectedSize(size)}
-                      className={`px-3 py-1.5 text-xs transition cursor-pointer ${
-                        selectedSize === size
-                          ? "bg-[#141311] font-medium text-[#FAF8F5]"
-                          : "border border-[#D9D1C2] bg-white/90 text-[#4A453F]"
-                      }`}
-                    >
-                      {size}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className="text-right">
-                <p className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-                  Price
-                </p>
-                <span className="font-display text-3xl font-normal text-[#141311]">
-                  ${currentPrice}
-                </span>
-              </div>
             </div>
 
             {/* CTA Buttons */}

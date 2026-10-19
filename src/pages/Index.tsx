@@ -4,10 +4,19 @@ import { Leaf } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { FragranceCard } from "@/components/FragranceCard";
 import { FRAGRANCES } from "@/data/fragrances";
+
+const FEATURED_FRAGRANCE_IDS = [
+  "enso-sunset-crush",
+  "enso-blue-legend-a1",
+  "enso-blue-legend-b2",
+];
+const FEATURED_FRAGRANCES = FEATURED_FRAGRANCE_IDS.map((id) =>
+  FRAGRANCES.find((fragrance) => fragrance.id === id),
+).filter((fragrance) => fragrance !== undefined);
 import { About } from "./About";
 import { CTABanner } from "./CTABanner";
 import { Footer } from "./Footer";
-import hero from "@/assets/hero.jpg";
+import hero from "@/assets/hero.png";
 import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
 
@@ -20,7 +29,7 @@ const slides = [
       <>
         Find Your Signature
         <br />
-        <em className="text-gold">Leave Your Scent</em>
+        <em className="text-gold">Leave Your <br />Scent</em>
       </>
     ),
     text: "Luxury perfumes crafted to inspire confidence and elegance.",
@@ -76,14 +85,14 @@ export function Index() {
             width={1920}
             height={832}
             loading={i === 0 ? "eager" : "lazy"}
-            className={`absolute inset-0 h-full w-full object-cover object-right transition-opacity duration-700 ${i === active ? "opacity-100" : "opacity-0"}`}
+            className={`absolute inset-0 h-full w-full object-cover object-[33%_center] transition-opacity duration-700 lg:object-right ${i === active ? "opacity-100" : "opacity-0"}`}
           />
         ))}
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/20 lg:from-background/90 lg:via-background/50 lg:to-transparent" />
-        <div className="relative px-6 py-24 lg:px-16 lg:py-36">
+        <div className="relative px-6 py-24 lg:px-16 lg:py-28">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-gold">{slide.tag}</p>
-          <h1 className="mt-6 font-display text-5xl leading-tight lg:text-7xl">{slide.title}</h1>
-          <p className="mt-6 max-w-xs text-lg font-light">{slide.text}</p>
+          <h1 className="mt-6 min-h-[3.75em] font-display text-5xl leading-tight lg:whitespace-nowrap lg:min-h-[2.5em] lg:text-7xl">{slide.title}</h1>
+          <p className="mt-6 min-h-[4.5em] max-w-xs text-lg font-light">{slide.text}</p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
               to="/collections"
@@ -122,16 +131,16 @@ export function Index() {
         <div className="mx-auto max-w-7xl">
           <div className="text-center sm:text-left">
             <p className="text-xs font-medium uppercase tracking-[0.25em] text-gold">
-              Artisanal Haute Parfumerie
+              EXCLUSIVE FINE FRAGRANCES{" "}
             </p>
             <h2 className="mt-3 font-display text-3xl font-normal text-[#1A1816] sm:text-4xl lg:text-5xl">
-              The Signature Flacons
+              Our Signature Scents
             </h2>
           </div>
 
           <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {FRAGRANCES.slice(0, 3).map((fragrance) => (
-              <FragranceCard key={fragrance.id} fragrance={fragrance} />
+            {FEATURED_FRAGRANCES.map((fragrance) => (
+              <FragranceCard key={fragrance.id} fragrance={fragrance} availableSizes={["100ml"]} />
             ))}
           </div>
 

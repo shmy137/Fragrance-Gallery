@@ -1,0 +1,1603 @@
+﻿{
+    "tldrawFileFormatVersion":  1,
+    "schema":  {
+                   "schemaVersion":  2,
+                   "sequences":  {
+                                     "com.tldraw.store":  5,
+                                     "com.tldraw.asset":  1,
+                                     "com.tldraw.camera":  1,
+                                     "com.tldraw.document":  2,
+                                     "com.tldraw.instance":  26,
+                                     "com.tldraw.instance_page_state":  5,
+                                     "com.tldraw.page":  1,
+                                     "com.tldraw.instance_presence":  6,
+                                     "com.tldraw.pointer":  1,
+                                     "com.tldraw.shape":  4,
+                                     "com.tldraw.user":  1,
+                                     "com.tldraw.asset.image":  6,
+                                     "com.tldraw.asset.video":  5,
+                                     "com.tldraw.asset.bookmark":  2,
+                                     "com.tldraw.shape.group":  0,
+                                     "com.tldraw.shape.text":  4,
+                                     "com.tldraw.shape.bookmark":  2,
+                                     "com.tldraw.shape.draw":  5,
+                                     "com.tldraw.shape.geo":  12,
+                                     "com.tldraw.shape.note":  13,
+                                     "com.tldraw.shape.line":  5,
+                                     "com.tldraw.shape.frame":  1,
+                                     "com.tldraw.shape.arrow":  8,
+                                     "com.tldraw.shape.highlight":  4,
+                                     "com.tldraw.shape.embed":  4,
+                                     "com.tldraw.shape.image":  5,
+                                     "com.tldraw.shape.video":  4,
+                                     "com.tldraw.binding.arrow":  1
+                                 }
+               },
+    "records":  [
+                    {
+                        "x":  0,
+                        "y":  0,
+                        "lastActivityTimestamp":  0,
+                        "meta":  {
+
+                                 },
+                        "id":  "pointer:pointer",
+                        "typeName":  "pointer"
+                    },
+                    {
+                        "x":  313.64517065889135,
+                        "y":  883.83952077244726,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:p17tkCoGY_m9oe_WKkNt0",
+                        "type":  "geo",
+                        "props":  {
+                                      "w":  274.63698208404344,
+                                      "h":  106.34439354146338,
+                                      "geo":  "rectangle",
+                                      "dash":  "draw",
+                                      "growY":  0,
+                                      "url":  "",
+                                      "scale":  1,
+                                      "flipX":  false,
+                                      "flipY":  false,
+                                      "color":  "black",
+                                      "labelColor":  "black",
+                                      "fill":  "none",
+                                      "size":  "m",
+                                      "font":  "draw",
+                                      "align":  "middle",
+                                      "verticalAlign":  "middle",
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph"
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aOf3n",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  -386.35482934110865,
+                        "y":  313.839520772447,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:U4eimBK5Smy4jSanPA6Os",
+                        "type":  "geo",
+                        "props":  {
+                                      "w":  274.63698208404344,
+                                      "h":  106.34439354146338,
+                                      "geo":  "rectangle",
+                                      "dash":  "draw",
+                                      "growY":  0,
+                                      "url":  "",
+                                      "scale":  1,
+                                      "flipX":  false,
+                                      "flipY":  false,
+                                      "color":  "black",
+                                      "labelColor":  "black",
+                                      "fill":  "none",
+                                      "size":  "m",
+                                      "font":  "draw",
+                                      "align":  "middle",
+                                      "verticalAlign":  "middle",
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph"
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "a3PHr",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  313.64517065889135,
+                        "y":  503.83952077244726,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:AL99ZE_XK-DCCu-djfgbL",
+                        "type":  "geo",
+                        "props":  {
+                                      "w":  274.63698208404344,
+                                      "h":  106.34439354146338,
+                                      "geo":  "rectangle",
+                                      "dash":  "draw",
+                                      "growY":  0,
+                                      "url":  "",
+                                      "scale":  1,
+                                      "flipX":  false,
+                                      "flipY":  false,
+                                      "color":  "black",
+                                      "labelColor":  "black",
+                                      "fill":  "none",
+                                      "size":  "m",
+                                      "font":  "draw",
+                                      "align":  "middle",
+                                      "verticalAlign":  "middle",
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph"
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aCyir",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  43.645170658891345,
+                        "y":  998.83952077244726,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:FouP_JyQcXd4p_MmpqX0p",
+                        "type":  "text",
+                        "props":  {
+                                      "color":  "black",
+                                      "size":  "m",
+                                      "w":  97.36250305175781,
+                                      "font":  "draw",
+                                      "textAlign":  "start",
+                                      "autoSize":  true,
+                                      "scale":  1,
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "attrs":  {
+                                                                     "dir":  "auto"
+                                                                 },
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph",
+                                                                           "attrs":  {
+                                                                                         "dir":  "auto"
+                                                                                     },
+                                                                           "content":  [
+                                                                                           {
+                                                                                               "type":  "text",
+                                                                                               "text":  "prize 16"
+                                                                                           }
+                                                                                       ]
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aQKEb",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  -36.354829341108655,
+                        "y":  503.83952077244726,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:ohyLubOhoC6bl6j09PGuD",
+                        "type":  "geo",
+                        "props":  {
+                                      "w":  274.63698208404344,
+                                      "h":  106.34439354146338,
+                                      "geo":  "rectangle",
+                                      "dash":  "draw",
+                                      "growY":  0,
+                                      "url":  "",
+                                      "scale":  1,
+                                      "flipX":  false,
+                                      "flipY":  false,
+                                      "color":  "black",
+                                      "labelColor":  "black",
+                                      "fill":  "none",
+                                      "size":  "m",
+                                      "font":  "draw",
+                                      "align":  "middle",
+                                      "verticalAlign":  "middle",
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph"
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aBnvQ",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  393.64517065889135,
+                        "y":  1188.8395207724473,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:yLg39XR7rkwcfJaWnu1zP",
+                        "type":  "text",
+                        "props":  {
+                                      "color":  "black",
+                                      "size":  "m",
+                                      "w":  102.8375015258789,
+                                      "font":  "draw",
+                                      "textAlign":  "start",
+                                      "autoSize":  true,
+                                      "scale":  1,
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "attrs":  {
+                                                                     "dir":  "auto"
+                                                                 },
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph",
+                                                                           "attrs":  {
+                                                                                         "dir":  "auto"
+                                                                                     },
+                                                                           "content":  [
+                                                                                           {
+                                                                                               "type":  "text",
+                                                                                               "text":  "prize 20"
+                                                                                           }
+                                                                                       ]
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aXc5X",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  923.2393435598605,
+                        "y":  -379.91761119454566,
+                        "z":  0.387420489,
+                        "meta":  {
+
+                                 },
+                        "id":  "camera:page:page",
+                        "typeName":  "camera"
+                    },
+                    {
+                        "x":  313.64517065889135,
+                        "y":  1073.8395207724473,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:MO_w5ggsQTmOx8yoomJio",
+                        "type":  "geo",
+                        "props":  {
+                                      "w":  274.63698208404344,
+                                      "h":  106.34439354146338,
+                                      "geo":  "rectangle",
+                                      "dash":  "draw",
+                                      "growY":  0,
+                                      "url":  "",
+                                      "scale":  1,
+                                      "flipX":  false,
+                                      "flipY":  false,
+                                      "color":  "black",
+                                      "labelColor":  "black",
+                                      "fill":  "none",
+                                      "size":  "m",
+                                      "font":  "draw",
+                                      "align":  "middle",
+                                      "verticalAlign":  "middle",
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph"
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aUxrI",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  393.64517065889135,
+                        "y":  428.83952077244726,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:Vwuk_makFRLTIXmA0EG-A",
+                        "type":  "text",
+                        "props":  {
+                                      "color":  "black",
+                                      "size":  "m",
+                                      "w":  87.3125,
+                                      "font":  "draw",
+                                      "textAlign":  "start",
+                                      "autoSize":  true,
+                                      "scale":  1,
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "attrs":  {
+                                                                     "dir":  "auto"
+                                                                 },
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph",
+                                                                           "attrs":  {
+                                                                                         "dir":  "auto"
+                                                                                     },
+                                                                           "content":  [
+                                                                                           {
+                                                                                               "type":  "text",
+                                                                                               "text":  "prize 8"
+                                                                                           }
+                                                                                       ]
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "a9wUu",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  -386.35482934110865,
+                        "y":  883.839520772447,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:bHpjAXRouaYenw4LOZFWj",
+                        "type":  "geo",
+                        "props":  {
+                                      "w":  274.63698208404344,
+                                      "h":  106.34439354146338,
+                                      "geo":  "rectangle",
+                                      "dash":  "draw",
+                                      "growY":  0,
+                                      "url":  "",
+                                      "scale":  1,
+                                      "flipX":  false,
+                                      "flipY":  false,
+                                      "color":  "black",
+                                      "labelColor":  "black",
+                                      "fill":  "none",
+                                      "size":  "m",
+                                      "font":  "draw",
+                                      "align":  "middle",
+                                      "verticalAlign":  "middle",
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph"
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aMYUD",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  -386.35482934110865,
+                        "y":  1073.839520772447,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:BOFrrA56c0NWjMDeAm_AS",
+                        "type":  "geo",
+                        "props":  {
+                                      "w":  274.63698208404344,
+                                      "h":  106.34439354146338,
+                                      "geo":  "rectangle",
+                                      "dash":  "draw",
+                                      "growY":  0,
+                                      "url":  "",
+                                      "scale":  1,
+                                      "flipX":  false,
+                                      "flipY":  false,
+                                      "color":  "black",
+                                      "labelColor":  "black",
+                                      "fill":  "none",
+                                      "size":  "m",
+                                      "font":  "draw",
+                                      "align":  "middle",
+                                      "verticalAlign":  "middle",
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph"
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aSZ2Q",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  -36.354829341108655,
+                        "y":  693.83952077244726,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:c1H1DX4W9r-BhlnzZv3Ul",
+                        "type":  "geo",
+                        "props":  {
+                                      "w":  274.63698208404344,
+                                      "h":  106.34439354146338,
+                                      "geo":  "rectangle",
+                                      "dash":  "draw",
+                                      "growY":  0,
+                                      "url":  "",
+                                      "scale":  1,
+                                      "flipX":  false,
+                                      "flipY":  false,
+                                      "color":  "black",
+                                      "labelColor":  "black",
+                                      "fill":  "none",
+                                      "size":  "m",
+                                      "font":  "draw",
+                                      "align":  "middle",
+                                      "verticalAlign":  "middle",
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph"
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aHw2r",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "editingShapeId":  "shape:yLg39XR7rkwcfJaWnu1zP",
+                        "croppingShapeId":  null,
+                        "selectedShapeIds":  [
+                                                 "shape:yLg39XR7rkwcfJaWnu1zP"
+                                             ],
+                        "hoveredShapeId":  "shape:yLg39XR7rkwcfJaWnu1zP",
+                        "erasingShapeIds":  [
+
+                                            ],
+                        "hintingShapeIds":  [
+
+                                            ],
+                        "focusedGroupId":  null,
+                        "meta":  {
+
+                                 },
+                        "id":  "instance_page_state:page:page",
+                        "pageId":  "page:page",
+                        "typeName":  "instance_page_state"
+                    },
+                    {
+                        "x":  74.2000732421875,
+                        "y":  180.60000610351562,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:OzQ5xHmdVQ1JALNwxm2In",
+                        "type":  "text",
+                        "props":  {
+                                      "color":  "black",
+                                      "size":  "m",
+                                      "w":  104.80000305175781,
+                                      "font":  "draw",
+                                      "textAlign":  "start",
+                                      "autoSize":  true,
+                                      "scale":  1,
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "attrs":  {
+                                                                     "dir":  "auto"
+                                                                 },
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph",
+                                                                           "attrs":  {
+                                                                                         "dir":  "auto"
+                                                                                     },
+                                                                           "content":  [
+                                                                                           {
+                                                                                               "type":  "text",
+                                                                                               "text":  "prize 1-5"
+                                                                                           }
+                                                                                       ]
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "a6Qc6",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  497.439324816046,
+                        "y":  834.2043745360685,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:UpX9LobDIrrnZEuenP-pm",
+                        "type":  "draw",
+                        "props":  {
+                                      "segments":  [
+                                                       {
+                                                           "type":  "free",
+                                                           "path":  "AAAAAAAAAAA=",
+                                                           "dim":  2
+                                                       }
+                                                   ],
+                                      "color":  "black",
+                                      "fill":  "none",
+                                      "dash":  "draw",
+                                      "size":  "m",
+                                      "isComplete":  true,
+                                      "isClosed":  false,
+                                      "isPen":  false,
+                                      "scale":  1,
+                                      "scaleX":  1,
+                                      "scaleY":  1
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aY4nj",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  3,
+                        "y":  103.80000305175781,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:0G_r_dhOrtUhAJXB6EQOT",
+                        "type":  "geo",
+                        "props":  {
+                                      "w":  244.79998779296875,
+                                      "h":  72.39999389648438,
+                                      "geo":  "rectangle",
+                                      "dash":  "draw",
+                                      "growY":  0,
+                                      "url":  "",
+                                      "scale":  1,
+                                      "flipX":  false,
+                                      "flipY":  false,
+                                      "color":  "black",
+                                      "labelColor":  "black",
+                                      "fill":  "none",
+                                      "size":  "m",
+                                      "font":  "draw",
+                                      "align":  "middle",
+                                      "verticalAlign":  "middle",
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph"
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "a1XUY",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  -36.354829341108655,
+                        "y":  883.83952077244726,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:QqOgIv5eCIdj8YNLq7lNR",
+                        "type":  "geo",
+                        "props":  {
+                                      "w":  274.63698208404344,
+                                      "h":  106.34439354146338,
+                                      "geo":  "rectangle",
+                                      "dash":  "draw",
+                                      "growY":  0,
+                                      "url":  "",
+                                      "scale":  1,
+                                      "flipX":  false,
+                                      "flipY":  false,
+                                      "color":  "black",
+                                      "labelColor":  "black",
+                                      "fill":  "none",
+                                      "size":  "m",
+                                      "font":  "draw",
+                                      "align":  "middle",
+                                      "verticalAlign":  "middle",
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph"
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aNdSr",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  393.64517065889135,
+                        "y":  808.83952077244726,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:6x6pQF6x2quQT335aTkQs",
+                        "type":  "text",
+                        "props":  {
+                                      "color":  "black",
+                                      "size":  "m",
+                                      "w":  98.5374984741211,
+                                      "font":  "draw",
+                                      "textAlign":  "start",
+                                      "autoSize":  true,
+                                      "scale":  1,
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "attrs":  {
+                                                                     "dir":  "auto"
+                                                                 },
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph",
+                                                                           "attrs":  {
+                                                                                         "dir":  "auto"
+                                                                                     },
+                                                                           "content":  [
+                                                                                           {
+                                                                                               "type":  "text",
+                                                                                               "text":  "prize 14"
+                                                                                           }
+                                                                                       ]
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aLShU",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  -306.35482934110865,
+                        "y":  428.839520772447,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:cN2N_04d2ygfi-sU-ut7J",
+                        "type":  "text",
+                        "props":  {
+                                      "color":  "black",
+                                      "size":  "m",
+                                      "w":  87.3125,
+                                      "font":  "draw",
+                                      "textAlign":  "start",
+                                      "autoSize":  true,
+                                      "scale":  1,
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "attrs":  {
+                                                                     "dir":  "auto"
+                                                                 },
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph",
+                                                                           "attrs":  {
+                                                                                         "dir":  "auto"
+                                                                                     },
+                                                                           "content":  [
+                                                                                           {
+                                                                                               "type":  "text",
+                                                                                               "text":  "prize 6"
+                                                                                           }
+                                                                                       ]
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "a7MsQ",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  313.64517065889135,
+                        "y":  693.83952077244726,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:A5oh2jfqwWfrQ_JZixHIu",
+                        "type":  "geo",
+                        "props":  {
+                                      "w":  274.63698208404344,
+                                      "h":  106.34439354146338,
+                                      "geo":  "rectangle",
+                                      "dash":  "draw",
+                                      "growY":  0,
+                                      "url":  "",
+                                      "scale":  1,
+                                      "flipX":  false,
+                                      "flipY":  false,
+                                      "color":  "black",
+                                      "labelColor":  "black",
+                                      "fill":  "none",
+                                      "size":  "m",
+                                      "font":  "draw",
+                                      "align":  "middle",
+                                      "verticalAlign":  "middle",
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph"
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aIzXH",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  -386.35482934110865,
+                        "y":  503.839520772447,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:SV9RXoEauxpdwBHzmKURj",
+                        "type":  "geo",
+                        "props":  {
+                                      "w":  274.63698208404344,
+                                      "h":  106.34439354146338,
+                                      "geo":  "rectangle",
+                                      "dash":  "draw",
+                                      "growY":  0,
+                                      "url":  "",
+                                      "scale":  1,
+                                      "flipX":  false,
+                                      "flipY":  false,
+                                      "color":  "black",
+                                      "labelColor":  "black",
+                                      "fill":  "none",
+                                      "size":  "m",
+                                      "font":  "draw",
+                                      "align":  "middle",
+                                      "verticalAlign":  "middle",
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph"
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aAmt6",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  -306.35482934110865,
+                        "y":  998.839520772447,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:6ydssWR8hMWFNYSXM7SKo",
+                        "type":  "text",
+                        "props":  {
+                                      "color":  "black",
+                                      "size":  "m",
+                                      "w":  95.9000015258789,
+                                      "font":  "draw",
+                                      "textAlign":  "start",
+                                      "autoSize":  true,
+                                      "scale":  1,
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "attrs":  {
+                                                                     "dir":  "auto"
+                                                                 },
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph",
+                                                                           "attrs":  {
+                                                                                         "dir":  "auto"
+                                                                                     },
+                                                                           "content":  [
+                                                                                           {
+                                                                                               "type":  "text",
+                                                                                               "text":  "prize 15"
+                                                                                           }
+                                                                                       ]
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aP59M",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  43.645170658891345,
+                        "y":  618.83952077244726,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:RpQ9GuIT6XIxXxDroOXE9",
+                        "type":  "text",
+                        "props":  {
+                                      "color":  "black",
+                                      "size":  "m",
+                                      "w":  96.88750457763672,
+                                      "font":  "draw",
+                                      "textAlign":  "start",
+                                      "autoSize":  true,
+                                      "scale":  1,
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "attrs":  {
+                                                                     "dir":  "auto"
+                                                                 },
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph",
+                                                                           "attrs":  {
+                                                                                         "dir":  "auto"
+                                                                                     },
+                                                                           "content":  [
+                                                                                           {
+                                                                                               "type":  "text",
+                                                                                               "text":  "prize 10"
+                                                                                           }
+                                                                                       ]
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aEGv2",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  313.64517065889135,
+                        "y":  313.83952077244726,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:cA46GEUpwIcz-GXUC0s56",
+                        "type":  "geo",
+                        "props":  {
+                                      "w":  274.63698208404344,
+                                      "h":  106.34439354146338,
+                                      "geo":  "rectangle",
+                                      "dash":  "draw",
+                                      "growY":  0,
+                                      "url":  "",
+                                      "scale":  1,
+                                      "flipX":  false,
+                                      "flipY":  false,
+                                      "color":  "black",
+                                      "labelColor":  "black",
+                                      "fill":  "none",
+                                      "size":  "m",
+                                      "font":  "draw",
+                                      "align":  "middle",
+                                      "verticalAlign":  "middle",
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph"
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "a5C9U",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  -306.35482934110865,
+                        "y":  1188.839520772447,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:IVGUYcJHNxYkoUFtprUXF",
+                        "type":  "text",
+                        "props":  {
+                                      "color":  "black",
+                                      "size":  "m",
+                                      "w":  97.5999984741211,
+                                      "font":  "draw",
+                                      "textAlign":  "start",
+                                      "autoSize":  true,
+                                      "scale":  1,
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "attrs":  {
+                                                                     "dir":  "auto"
+                                                                 },
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph",
+                                                                           "attrs":  {
+                                                                                         "dir":  "auto"
+                                                                                     },
+                                                                           "content":  [
+                                                                                           {
+                                                                                               "type":  "text",
+                                                                                               "text":  "prize 18"
+                                                                                           }
+                                                                                       ]
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aV9aI",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  -306.35482934110865,
+                        "y":  618.839520772447,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:5GgYfYzohFAcwCNmvN905",
+                        "type":  "text",
+                        "props":  {
+                                      "color":  "black",
+                                      "size":  "m",
+                                      "w":  95.5374984741211,
+                                      "font":  "draw",
+                                      "textAlign":  "start",
+                                      "autoSize":  true,
+                                      "scale":  1,
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "attrs":  {
+                                                                     "dir":  "auto"
+                                                                 },
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph",
+                                                                           "attrs":  {
+                                                                                         "dir":  "auto"
+                                                                                     },
+                                                                           "content":  [
+                                                                                           {
+                                                                                               "type":  "text",
+                                                                                               "text":  "prize 9 "
+                                                                                           }
+                                                                                       ]
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aDLAU",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  -306.35482934110865,
+                        "y":  808.839520772447,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:MZftTauE7TPn9AFtgqsfU",
+                        "type":  "text",
+                        "props":  {
+                                      "color":  "black",
+                                      "size":  "m",
+                                      "w":  97.2249984741211,
+                                      "font":  "draw",
+                                      "textAlign":  "start",
+                                      "autoSize":  true,
+                                      "scale":  1,
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "attrs":  {
+                                                                     "dir":  "auto"
+                                                                 },
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph",
+                                                                           "attrs":  {
+                                                                                         "dir":  "auto"
+                                                                                     },
+                                                                           "content":  [
+                                                                                           {
+                                                                                               "type":  "text",
+                                                                                               "text":  "prize 12"
+                                                                                           }
+                                                                                       ]
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aJOvQ",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  -36.354829341108655,
+                        "y":  1073.8395207724473,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:0s-8hwG0YifcKfCqZHYxy",
+                        "type":  "geo",
+                        "props":  {
+                                      "w":  274.63698208404344,
+                                      "h":  106.34439354146338,
+                                      "geo":  "rectangle",
+                                      "dash":  "draw",
+                                      "growY":  0,
+                                      "url":  "",
+                                      "scale":  1,
+                                      "flipX":  false,
+                                      "flipY":  false,
+                                      "color":  "black",
+                                      "labelColor":  "black",
+                                      "fill":  "none",
+                                      "size":  "m",
+                                      "font":  "draw",
+                                      "align":  "middle",
+                                      "verticalAlign":  "middle",
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph"
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aTKgv",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  -36.354829341108655,
+                        "y":  313.83952077244726,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:doULgNPb774EgAuaGm3QG",
+                        "type":  "geo",
+                        "props":  {
+                                      "w":  274.63698208404344,
+                                      "h":  106.34439354146338,
+                                      "geo":  "rectangle",
+                                      "dash":  "draw",
+                                      "growY":  0,
+                                      "url":  "",
+                                      "scale":  1,
+                                      "flipX":  false,
+                                      "flipY":  false,
+                                      "color":  "black",
+                                      "labelColor":  "black",
+                                      "fill":  "none",
+                                      "size":  "m",
+                                      "font":  "draw",
+                                      "align":  "middle",
+                                      "verticalAlign":  "middle",
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph"
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "a4SDQ",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  393.64517065889135,
+                        "y":  998.83952077244726,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:knjum9ynKQJcK7RFKfaha",
+                        "type":  "text",
+                        "props":  {
+                                      "color":  "black",
+                                      "size":  "m",
+                                      "w":  97.17500305175781,
+                                      "font":  "draw",
+                                      "textAlign":  "start",
+                                      "autoSize":  true,
+                                      "scale":  1,
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "attrs":  {
+                                                                     "dir":  "auto"
+                                                                 },
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph",
+                                                                           "attrs":  {
+                                                                                         "dir":  "auto"
+                                                                                     },
+                                                                           "content":  [
+                                                                                           {
+                                                                                               "type":  "text",
+                                                                                               "text":  "prize 17"
+                                                                                           }
+                                                                                       ]
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aRsXA",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "meta":  {
+
+                                 },
+                        "id":  "page:page",
+                        "name":  "Page 1",
+                        "index":  "a1",
+                        "typeName":  "page"
+                    },
+                    {
+                        "gridSize":  10,
+                        "name":  "",
+                        "meta":  {
+
+                                 },
+                        "id":  "document:document",
+                        "typeName":  "document"
+                    },
+                    {
+                        "followingUserId":  null,
+                        "opacityForNextShape":  1,
+                        "stylesForNextShape":  {
+                                                   "tldraw:color":  "black",
+                                                   "tldraw:size":  "m",
+                                                   "tldraw:geo":  "rectangle"
+                                               },
+                        "brush":  null,
+                        "scribbles":  [
+
+                                      ],
+                        "cursor":  {
+                                       "type":  "default",
+                                       "rotation":  0
+                                   },
+                        "isFocusMode":  false,
+                        "exportBackground":  true,
+                        "isDebugMode":  false,
+                        "isToolLocked":  false,
+                        "screenBounds":  {
+                                             "x":  0,
+                                             "y":  0,
+                                             "w":  882.4000244140625,
+                                             "h":  402.3999938964844
+                                         },
+                        "insets":  [
+                                       false,
+                                       false,
+                                       true,
+                                       false
+                                   ],
+                        "zoomBrush":  null,
+                        "isGridMode":  false,
+                        "isPenMode":  false,
+                        "chatMessage":  "",
+                        "isChatting":  false,
+                        "highlightedUserIds":  [
+
+                                               ],
+                        "isFocused":  true,
+                        "devicePixelRatio":  1.25,
+                        "isCoarsePointer":  false,
+                        "isHoveringCanvas":  true,
+                        "openMenus":  [
+
+                                      ],
+                        "isChangingStyle":  false,
+                        "isReadonly":  false,
+                        "meta":  {
+
+                                 },
+                        "duplicateProps":  null,
+                        "cameraState":  "idle",
+                        "id":  "instance:instance",
+                        "currentPageId":  "page:page",
+                        "typeName":  "instance"
+                    },
+                    {
+                        "x":  -386.35482934110865,
+                        "y":  693.839520772447,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:lLYUfFiURETgrRDe02E32",
+                        "type":  "geo",
+                        "props":  {
+                                      "w":  274.63698208404344,
+                                      "h":  106.34439354146338,
+                                      "geo":  "rectangle",
+                                      "dash":  "draw",
+                                      "growY":  0,
+                                      "url":  "",
+                                      "scale":  1,
+                                      "flipX":  false,
+                                      "flipY":  false,
+                                      "color":  "black",
+                                      "labelColor":  "black",
+                                      "fill":  "none",
+                                      "size":  "m",
+                                      "font":  "draw",
+                                      "align":  "middle",
+                                      "verticalAlign":  "middle",
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph"
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aGnWf",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "name":  "",
+                        "color":  "#11B3A3",
+                        "imageUrl":  "",
+                        "meta":  {
+
+                                 },
+                        "id":  "user:qllmDwZwYRVpYF1GpvkHn",
+                        "typeName":  "user"
+                    },
+                    {
+                        "x":  43.645170658891345,
+                        "y":  808.83952077244726,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:h2G4QixkxQa-Fm6Wy7cOl",
+                        "type":  "text",
+                        "props":  {
+                                      "color":  "black",
+                                      "size":  "m",
+                                      "w":  97.125,
+                                      "font":  "draw",
+                                      "textAlign":  "start",
+                                      "autoSize":  true,
+                                      "scale":  1,
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "attrs":  {
+                                                                     "dir":  "auto"
+                                                                 },
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph",
+                                                                           "attrs":  {
+                                                                                         "dir":  "auto"
+                                                                                     },
+                                                                           "content":  [
+                                                                                           {
+                                                                                               "type":  "text",
+                                                                                               "text":  "prize 13"
+                                                                                           }
+                                                                                       ]
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aKnxM",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  74.2000732421875,
+                        "y":  180.60000610351562,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:FOuzqxbF9ANWb3XHfbxRv",
+                        "type":  "text",
+                        "props":  {
+                                      "color":  "black",
+                                      "size":  "m",
+                                      "w":  104.80000305175781,
+                                      "font":  "draw",
+                                      "textAlign":  "start",
+                                      "autoSize":  true,
+                                      "scale":  1,
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "attrs":  {
+                                                                     "dir":  "auto"
+                                                                 },
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph",
+                                                                           "attrs":  {
+                                                                                         "dir":  "auto"
+                                                                                     },
+                                                                           "content":  [
+                                                                                           {
+                                                                                               "type":  "text",
+                                                                                               "text":  "prize 1-5"
+                                                                                           }
+                                                                                       ]
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "a2zAu",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  43.645170658891345,
+                        "y":  1188.8395207724473,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:gQC11R12VkaT5dUJi8h3V",
+                        "type":  "text",
+                        "props":  {
+                                      "color":  "black",
+                                      "size":  "m",
+                                      "w":  97.30000305175781,
+                                      "font":  "draw",
+                                      "textAlign":  "start",
+                                      "autoSize":  true,
+                                      "scale":  1,
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "attrs":  {
+                                                                     "dir":  "auto"
+                                                                 },
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph",
+                                                                           "attrs":  {
+                                                                                         "dir":  "auto"
+                                                                                     },
+                                                                           "content":  [
+                                                                                           {
+                                                                                               "type":  "text",
+                                                                                               "text":  "prize 19"
+                                                                                           }
+                                                                                       ]
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aWc0f",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  43.645170658891345,
+                        "y":  428.83952077244726,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:_k3IY7NEG904rdwpV4LUv",
+                        "type":  "text",
+                        "props":  {
+                                      "color":  "black",
+                                      "size":  "m",
+                                      "w":  87.26250457763672,
+                                      "font":  "draw",
+                                      "textAlign":  "start",
+                                      "autoSize":  true,
+                                      "scale":  1,
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "attrs":  {
+                                                                     "dir":  "auto"
+                                                                 },
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph",
+                                                                           "attrs":  {
+                                                                                         "dir":  "auto"
+                                                                                     },
+                                                                           "content":  [
+                                                                                           {
+                                                                                               "type":  "text",
+                                                                                               "text":  "prize 7"
+                                                                                           }
+                                                                                       ]
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "a8fg6",
+                        "typeName":  "shape"
+                    },
+                    {
+                        "x":  393.64517065889135,
+                        "y":  618.83952077244726,
+                        "rotation":  0,
+                        "isLocked":  false,
+                        "opacity":  1,
+                        "meta":  {
+
+                                 },
+                        "id":  "shape:8PTCdgwu-WnBeUL0tqT60",
+                        "type":  "text",
+                        "props":  {
+                                      "color":  "black",
+                                      "size":  "m",
+                                      "w":  90.2125015258789,
+                                      "font":  "draw",
+                                      "textAlign":  "start",
+                                      "autoSize":  true,
+                                      "scale":  1,
+                                      "richText":  {
+                                                       "type":  "doc",
+                                                       "attrs":  {
+                                                                     "dir":  "auto"
+                                                                 },
+                                                       "content":  [
+                                                                       {
+                                                                           "type":  "paragraph",
+                                                                           "attrs":  {
+                                                                                         "dir":  "auto"
+                                                                                     },
+                                                                           "content":  [
+                                                                                           {
+                                                                                               "type":  "text",
+                                                                                               "text":  "prize 11"
+                                                                                           }
+                                                                                       ]
+                                                                       }
+                                                                   ]
+                                                   }
+                                  },
+                        "parentId":  "page:page",
+                        "index":  "aF5cE",
+                        "typeName":  "shape"
+                    }
+                ]
+}

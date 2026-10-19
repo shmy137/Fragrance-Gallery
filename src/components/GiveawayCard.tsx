@@ -6,6 +6,7 @@ import { useCountdown } from "@/lib/useCountdown";
 import prize from "@/assets/hero-2.jpg";
 
 const REVEAL_DELAY_MS = 2500;
+const SEEN_KEY = "fg-giveaway-card-seen";
 
 const pad = (value: number) => String(value).padStart(2, "0");
 
@@ -23,16 +24,29 @@ function CountdownCell({ value, label }: { value: number; label: string }) {
 export function GiveawayCard() {
   const { pathname } = useLocation();
   const [visible, setVisible] = useState(false);
-  const [dismissed, setDismissed] = useState(false);
+  // Once the card has been shown (or dismissed) in this browser session,
+  // it never returns — even across route changes or refreshes — until the
+  // session ends.
+  const [dismissed, setDismissed] = useState(() => {
+    try {
+      return sessionStorage.getItem(SEEN_KEY) === "1";
+    } catch {
+      return false;
+    }
+  });
   const countdown = useCountdown(GIVEAWAY_DEADLINE_ISO);
 
-  // Dismissal lives only in memory: it holds while the visitor stays on the
-  // site (even across route changes) and resets on refresh, so the card
-  // returns for the next visit.
   useEffect(() => {
     if (pathname !== "/" || dismissed) return;
 
-    const id = window.setTimeout(() => setVisible(true), REVEAL_DELAY_MS);
+    const id = window.setTimeout(() => {
+      setVisible(true);
+      try {
+        sessionStorage.setItem(SEEN_KEY, "1");
+      } catch {
+        // sessionStorage unavailable — fall back to in-memory only.
+      }
+    }, REVEAL_DELAY_MS);
     return () => window.clearTimeout(id);
   }, [pathname, dismissed]);
 

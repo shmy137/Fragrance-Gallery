@@ -10,7 +10,6 @@ const nav = [
   { label: "Collections", section: "collections" },
   { label: "Giveaway", to: "/giveaway" },
   { label: "Contact", section: "contact" },
-  
 ];
 
 export function SiteHeader() {
@@ -44,10 +43,15 @@ export function SiteHeader() {
           {label}
         </Link>
       ) : (
-        <a key={label} href={`/#${section}`} className={className} onClick={(e) => goToSection(e, section!)}>
+        <a
+          key={label}
+          href={`/#${section}`}
+          className={className}
+          onClick={(e) => goToSection(e, section!)}
+        >
           {label}
         </a>
-      )
+      ),
     );
 
   return (
@@ -69,7 +73,7 @@ export function SiteHeader() {
       </Link>
 
       {/* Desktop nav */}
-      <nav className="hidden gap-9 text-sm uppercase tracking-[0.15em] lg:flex">
+      <nav className="hidden gap-9 font-nav text-[15px] font-medium uppercase tracking-[0.2em] lg:flex">
         {renderLinks("flex items-center gap-1 transition-colors hover:text-gold")}
       </nav>
 
@@ -93,7 +97,7 @@ export function SiteHeader() {
             </SheetHeader>
             <nav className="flex flex-col px-6 py-4">
               {renderLinks(
-                "flex items-center justify-between border-b border-foreground/5 py-4 text-sm uppercase tracking-[0.15em] transition-colors hover:text-gold"
+                "flex items-center justify-between border-b border-foreground/5 py-4 font-nav text-[15px] font-medium uppercase tracking-[0.2em] transition-colors hover:text-gold",
               )}
             </nav>
           </SheetContent>
