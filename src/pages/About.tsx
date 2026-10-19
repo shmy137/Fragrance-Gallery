@@ -128,7 +128,7 @@ export function About() {
               <dd>
                 <CountUp
                   value={s.value}
-                  suffix={s.suffix}
+                  {...(s.suffix ? { suffix: s.suffix } : {})}
                   className="block font-display text-4xl text-gold lg:text-5xl"
                 />
                 <span className="mt-3 block text-[11px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
