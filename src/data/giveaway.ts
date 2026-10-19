@@ -18,7 +18,7 @@
  * value, so the deadline only ever needs to be changed here. It is a fixed
  * point in time, so it does not restart on page refresh, remount or reopen.
  */
-export const GIVEAWAY_DEADLINE_ISO = "2027-04-30T23:59:59+05:30";
+export const GIVEAWAY_DEADLINE_ISO = "2026-12-31T23:59:59Z"; // PLACEHOLDER
 
 export interface GiveawayConfig {
   brand: string;
