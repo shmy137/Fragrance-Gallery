@@ -19,6 +19,7 @@ import { Footer } from "./Footer";
 import hero from "@/assets/hero.png";
 import hero2 from "@/assets/hero-2.png";
 import hero3 from "@/assets/hero-3.png";
+import { useSeo } from "@/lib/seo";
 
 const slides = [
   {
@@ -64,6 +65,14 @@ const slides = [
 
 export function Index() {
   const [active, setActive] = useState(0);
+
+  useSeo({
+    title: "Fragrance Gallery — Luxury Perfumes",
+    description:
+      "Discover artisanal luxury perfumes from Fragrance Gallery — floral, woody, oriental and citrus compositions crafted from rare Grasse ingredients.",
+    path: "/",
+    image: slides[0]!.image,
+  });
 
   useEffect(() => {
     const id = setInterval(() => setActive((i) => (i + 1) % slides.length), 6000);

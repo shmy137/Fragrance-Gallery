@@ -19,7 +19,7 @@ function CountUp({
   className,
 }: {
   value: number;
-  suffix?: string;
+  suffix?: string | undefined;
   duration?: number;
   className?: string;
 }) {

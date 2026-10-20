@@ -5,6 +5,7 @@ import { Footer } from "./Footer";
 import { GIVEAWAY, GIVEAWAY_DEADLINE_ISO } from "@/data/giveaway";
 import { useCountdown } from "@/lib/useCountdown";
 import { buildWhatsAppMessageUrl } from "@/lib/whatsapp";
+import { useSeo } from "@/lib/seo";
 import prize1to5 from "@/assets/1-5_.png";
 import prize6 from "@/assets/6.png";
 import prize7 from "@/assets/7.png";
@@ -123,11 +124,21 @@ function Section({
 }
 
 export function Giveaway() {
+  useSeo({
+    title: "Giveaway — Fragrance Gallery",
+    description:
+      "Enter the Fragrance Gallery perfume giveaway for a chance to win a signature flacon. See how to enter, eligibility and the closing date.",
+    path: "/giveaway",
+    noindex: true,
+  });
+
   const countdown = useCountdown(GIVEAWAY_DEADLINE_ISO);
 
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
       <SiteHeader />
+
+      <h1 className="sr-only">Fragrance Gallery Perfume Giveaway</h1>
 
       <section className="relative bg-[#F7F2E9] px-6 py-8 sm:py-10 lg:px-16 lg:py-12">
         <div className="mx-auto max-w-5xl">

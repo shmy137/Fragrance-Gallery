@@ -1,13 +1,3 @@
-import ensoImg from "@/assets/fragrance-enso-paris.jpg";
-import santalImg from "@/assets/fragrance-santal-blanc.jpg";
-import fleurNuitImg from "@/assets/fragrance-fleur-nuit.jpg";
-import bergamoteImg from "@/assets/fragrance-bergamote.jpg";
-import irisImg from "@/assets/fragrance-iris-celeste.jpg";
-import cuirImg from "@/assets/fragrance-cuir-eternel.jpg";
-import velvetOrchidImg from "@/assets/hero-2.jpg";
-import veridanImg from "@/assets/hero-3.jpg";
-import roseSolifloreImg from "@/assets/hero.jpg";
-
 export type BottleSize = "100ml";
 
 export interface Fragrance {
