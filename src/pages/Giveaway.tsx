@@ -178,8 +178,11 @@ export function Giveaway() {
               alt="Giveaway prizes 1 to 5"
               className="-mx-6 h-32 w-[calc(100%+3rem)] object-cover object-right sm:mx-0 sm:h-auto sm:w-full sm:max-h-[34rem] sm:object-contain lg:max-h-[26rem]"
             />
-            <h2 className="mt-3 text-center font-anek text-2xl font-bold uppercase tracking-[0.16em] text-[#7A5E2E] sm:text-lg">
+            <h2 className="mt-3 text-center font-anek text-2xl font-semibold uppercase tracking-[0.16em] text-[#7A5E2E] sm:text-lg">
               Prize 1–5
+            </h2>
+            <h2 className="mt-3 text-center font-anek text-lg font-semibold uppercase tracking-[0.16em] text-[#7A5E2E] sm:text-lg">
+             10 cent plot for each first five winners
             </h2>
           </article>
 
@@ -195,7 +198,7 @@ export function Giveaway() {
                   loading="lazy"
                   className={`${size ?? "h-48 sm:h-55"} w-full object-contain ${imgClass ?? ""}`}
                 />
-                <h3 className="mt-3 text-center font-anek text-2xl font-bold uppercase tracking-[0.16em] text-[#7A5E2E] sm:text-lg">
+                <h3 className="mt-3 text-center font-anek text-2xl font-semibold uppercase tracking-[0.16em] text-[#7A5E2E] sm:text-lg">
                   {string}
                 </h3>
               </article>
