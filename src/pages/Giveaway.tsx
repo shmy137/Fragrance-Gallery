@@ -176,12 +176,12 @@ export function Giveaway() {
             <img
               src={"https://res.cloudinary.com/mpfeep2s/image/upload/v1792405818/1-5_.png"}
               alt="Giveaway prizes 1 to 5"
-              className="-mx-6 h-32 w-[calc(100%+3rem)] object-cover object-right sm:mx-0 sm:h-auto sm:w-full sm:max-h-[34rem] sm:object-contain lg:max-h-[26rem]"
+              className="-mx-6 h-auto w-[calc(100%+3rem)] object-contain sm:mx-0 sm:w-full sm:max-h-[34rem] lg:max-h-[26rem]"
             />
             <h2 className="mt-3 text-center font-anek text-2xl font-semibold uppercase tracking-[0.16em] text-[#7A5E2E] sm:text-lg">
               Prize 1–5
             </h2>
-            <h2 className="mt-3 text-center font-anek text-lg font-semibold uppercase tracking-[0.16em] text-[#7A5E2E] sm:text-lg">
+            <h2 className="mt-3 text-center font-anek text-lg font-medium uppercase tracking-[0.16em] text-[#7A5E2E] sm:text-lg sm:font-medium">
              10 cent plot for each first five winners
             </h2>
           </article>
