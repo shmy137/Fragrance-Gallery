@@ -3,8 +3,19 @@ import { Sparkles } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { FRAGRANCES } from "@/data/fragrances";
 import { FragranceCard } from "@/components/FragranceCard";
+import { useSeo, JsonLd, buildProductsJsonLd } from "@/lib/seo";
+
+const PRODUCTS_JSON_LD = buildProductsJsonLd(FRAGRANCES);
 
 export function Collections() {
+  useSeo({
+    title: "The Scent Collection — Fragrance Gallery",
+    description:
+      "Browse the Fragrance Gallery scent collection of artisanal perfumes. Explore floral, woody, oriental and citrus compositions with notes, ratings and pricing.",
+    path: "/collections",
+    image: FRAGRANCES[0]?.image,
+  });
+
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
       <SiteHeader />
@@ -51,6 +62,7 @@ export function Collections() {
         </div>
       </main>
 
+      <JsonLd data={PRODUCTS_JSON_LD} />
     </div>
   );
 }
