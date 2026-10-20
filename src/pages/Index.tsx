@@ -53,7 +53,7 @@ const slides = [
     tag: "Botanical Essence",
     title: (
       <>
-        Veridan
+        Exotic
         <br />
         <em className="text-gold">Fresh &amp; Bold</em>
       </>
